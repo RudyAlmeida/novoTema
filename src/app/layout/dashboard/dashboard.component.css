@@ -1,19 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
-
-
-/* html,
-body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+/* layout {
+    display: flex;
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
 } */
 
+
+/* Base styles for individual layouts */
+
+
+/* * {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    width: 100%;
+} */
+
+
+/* Base styles for components that load as a route */
+
+
+/* router-outlet {
+
+      + * {
+          position: relative;
+          display: flex;
+          flex: 1 1 auto;
+          width: 100%;
+      }
+  } */
+
+
+/*
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header-class {
+    width: 100%;
+    height: 4vw;
+    background-color: whitesmoke;
+    border-bottom: 1px black solid;
+}
+
+.footer-class {
+    width: 100%;
+    height: 2vw;
+    background-color: whitesmoke;
+     border-top: 1px black solid;
+}*/
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 :root {
     --header-height: 3rem;
-    --footer-height: 3rem;
     --nav-width: 68px;
     --first-color: #4723D9;
     --first-color-light: #AFA5D9;
@@ -32,7 +73,6 @@ body {
 body {
     position: relative;
     margin: var(--header-height) 0 0 0;
-    margin: var(--footer-height) 0 0 0;
     padding: 0 1rem;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
@@ -41,27 +81,6 @@ body {
 
 a {
     text-decoration: none
-}
-
-.footer {
-    width: 100%;
-    height: var(--footer-height);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem;
-    background-color: var(--white-color);
-    z-index: var(--z-fixed);
-    transition: .5s
-}
-
-.footer_toggle {
-    color: var(--first-color);
-    font-size: 1.5rem;
-    cursor: pointer
 }
 
 .header {
@@ -111,7 +130,7 @@ a {
 }
 
 .nav {
-    height: 90%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -184,7 +203,6 @@ a {
 @media screen and (min-width: 768px) {
     body {
         margin: calc(var(--header-height) + 1rem) 0 0 0;
-        margin: calc(var(--footer-height) + 1rem) 0 0 0;
         padding-left: calc(var(--nav-width) + 2rem)
     }
     .header {
